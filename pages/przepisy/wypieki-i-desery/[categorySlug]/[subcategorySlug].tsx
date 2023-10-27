@@ -30,6 +30,7 @@ const DessertSubcatogory = ({
   categorySlug,
   parentCategoryName,
 }: CategoryListingProps): ReactElement => {
+ 
   const mappedRelatedCards = recipesData.map((item) =>
     mapRelatedCard(item.node),
   )
