@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react'
-
+import Image from 'next/image'
 import { StyledPictureWrapper } from './Picture.styled'
 import { PicutreTypes } from './Picture.types'
 
@@ -12,11 +12,12 @@ export const Picture = ({
 }: PicutreTypes): ReactElement => (
   <StyledPictureWrapper>
     {children}
-    <source srcSet={path && `${path}?fm=webp` || 'https://www.pogotujmy.pl/wp-content/uploads/2023/10/placeholder-scaled.jpg'} type="image/webp" />
-    <img
-      src={path && `${path}?fm=webp${width ? `&w=${width}` : ''}` || 'https://www.pogotujmy.pl/wp-content/uploads/2023/10/placeholder-scaled.jpg'}
+    <source srcSet={path ? path : 'https://www.pogotujmy.pl/wp-content/uploads/2023/10/placeholder-scaled.jpg'}/>
+    <Image
+      src={path ? path : 'https://www.pogotujmy.pl/wp-content/uploads/2023/10/placeholder-scaled.jpg'}
       alt={altText}
       loading="lazy"
+      layout="fill"
       onClick={onClick}
     />
   </StyledPictureWrapper>

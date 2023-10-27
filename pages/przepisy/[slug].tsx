@@ -129,8 +129,6 @@ const singleRecipe = ({
           { label: 'przepisy', url: '/przepisy' },
         ]}
       />
-      {/* <SeoHead {...mapSeoHead(metaData)} /> */}
-      {console.log('excerpt', recipeHero.excerpt)}
       <RecipeTemplate
         recipeHero={recipeHero}
         recipeTags={recipe.tags.edges}
@@ -178,6 +176,8 @@ export async function getStaticProps(context: {
   const recipeData = await getSinglePost(`"${slug}"`)
 
   const newestRecipesResponse = await getWordpressPosts(8)
+  console.log(newestRecipesResponse.map((item) =>
+  (item.node.featuredImage.node.sourceUrl)))
   const now = new Date()
   const date30daysBefore = new Date(
     now.getFullYear(),

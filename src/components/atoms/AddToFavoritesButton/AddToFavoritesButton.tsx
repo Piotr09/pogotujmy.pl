@@ -224,7 +224,7 @@ export const AddToFavoritesButton = ({
       className={className}
       target={openInNewTab ? '_blank' : undefined}
       rel="noopener noreferrer"
-      aria-label={aria}
+      aria-label={favorites.some((item) => item.title === title) ? "Usuń z ulubionych" : "Dodaj do ulubionych"}
       onClick={() => addToFavorites({ title, slug, featuredImage })}
     >
       {favorites.some((item) => item.title === title) ? (

@@ -17,7 +17,7 @@ export const getSingleton = async (singletonName: string) =>
     headers: { 'Cockpit-Token': token },
   })
 
-async function fetchWordpress(query, { variables } = {}) {
+export async function fetchWordpress(query, { variables } = {}) {
   const headers = { 'Content-Type': 'application/json' }
 
   if (process.env.WORDPRESS_API_URL) {
@@ -42,6 +42,23 @@ async function fetchWordpress(query, { variables } = {}) {
   }
   return json.data
 }
+
+export async function getImageUrls() {
+  const data = await fetchWordpress(
+    `query AllImages {
+      mediaItems {
+        edges {
+          cursor
+          node {
+            sourceUrl
+          }
+        }
+      }
+    `,
+  )
+  return data.mediaItems.edges
+}
+
 
 export async function getPostsByCategoryName(categoryName) {
   const data = await fetchWordpress(
