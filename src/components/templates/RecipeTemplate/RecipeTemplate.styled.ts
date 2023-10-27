@@ -52,7 +52,6 @@ export const ContentSection = styled.section`
     padding: 2rem 0;
     line-height: 130%;
   }
-  padding-right: 3rem;
   ul,
   ol {
     margin: 2rem 2rem;
@@ -79,5 +78,9 @@ export const ContentSection = styled.section`
     p {
       font-weight: bold;
     }
+  }
+
+  @media ${({ theme }) => theme.media.tablet} {
+    padding-right: 3rem;
   }
 `

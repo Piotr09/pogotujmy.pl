@@ -129,8 +129,6 @@ export const AddToFavoritesButton = ({
     const getArray = JSON.parse(
       localStorage.getItem('favoritesListNew2') || '0',
     )
-    console.log('getArray', getArray)
-
     if (getArray !== 0) {
       setFavorites([...getArray])
     }
@@ -140,7 +138,6 @@ export const AddToFavoritesButton = ({
     const array = favorites
     let addArray = true
     array.map((item, key) => {
-      console.log('item', props)
       if (item.title === props.title) {
         array.splice(key, 1)
         addArray = false

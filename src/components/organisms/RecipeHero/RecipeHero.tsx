@@ -35,7 +35,7 @@ export const RecipeHero = ({
       <ImageWrapper>
         <Picture {...image} onClick={() => setZoom(!zoom)} />
         <IconWrapper>
-          {!isHomepage && <ZoomButton />}
+          {!isHomepage && <ZoomButton onClick={() => setZoom(!zoom)}/>}
           {!isHomepage && (
             <AddToFavoritesButton
               url={`przepisy/${slug}`}
@@ -57,7 +57,7 @@ export const RecipeHero = ({
         </FixedImage>
       )}
       <DescriptionWrapper isHomepage={isHomepage} slug={slug}>
-        {slug ? (
+        {isHomepage ? (
           <a href={`/przepisy/${slug}`}>
             <h1>{title}</h1>
             <p>{ReactHtmlParser(`${excerpt}`)}</p>
