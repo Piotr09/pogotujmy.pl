@@ -54,10 +54,12 @@ export const ImageWrapper = styled.div<Partial<RecipeHeroProps>>`
     width: 100%;
     margin: 0 auto;
     z-index: -1;
+    min-height: 65vh;
 
     @media ${({ theme }) => theme.media.desktop} {
       margin: 0 30px 40px 0;
       width: 90%;
+      min-height: unset;
     }
 
     img {
@@ -126,11 +128,14 @@ export const DescriptionWrapper = styled.div<Partial<RecipeHeroProps>>`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 3% 8% 5%;
+  padding: 3% 16px 10%;
   z-index: 2;
-
+  box-shadow: rgba(149,157,165,0.1) 0 8px 24px;
+  margin-bottom: 2rem;
+  line-height: 175%;
+  
   :hover {
-    cursor: ${({ slug }) => (slug ? 'pointer' : 'unset')};
+    cursor: ${({ isHomepage }) => (isHomepage ? 'pointer' : 'unset')};
   }
 
   @media ${({ theme }) => theme.media.desktop} {

@@ -4,7 +4,7 @@ import { Instagram as InstagramIcon } from '@styled-icons/boxicons-logos/Instagr
 import { PinterestAlt as PinterestIcon } from '@styled-icons/boxicons-logos/PinterestAlt'
 import { Tiktok as TiktokIcon } from '@styled-icons/boxicons-logos/Tiktok'
 import { Youtube as YoutubeIcon } from '@styled-icons/boxicons-logos/Youtube'
-import { SocialMedia } from './SocialMedia.styled'
+import { SocialMedia, IconsWrapper } from './SocialMedia.styled'
 import React from 'react'
 
 export const SocialMediaBlock = ({
@@ -13,6 +13,7 @@ export const SocialMediaBlock = ({
 }: SocialMediaTypes): React.ReactElement => (
   <SocialMedia size={size} label={label}>
     {label && <p>{label}</p>}
+    <IconsWrapper>
     <a
       href="https://www.facebook.com/pogotujmypl/"
       rel="noopener nofollow"
@@ -48,5 +49,6 @@ export const SocialMediaBlock = ({
     >
       <YoutubeIcon />
     </a>
+    </IconsWrapper>
   </SocialMedia>
 )
