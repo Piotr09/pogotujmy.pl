@@ -75,7 +75,7 @@
     {
       "source": "/2016/09/recenzja-prasy-do-oleju-counter-intelligence-oilpresso-lop-g3.html",
       "destination": "/artykuly/recenzja-prasy-do-oleju-counter-intelligence-oilpresso-lop-g3"
-    },
+    }
     // {
     //   "source": "/((?!przepisy) || (?!artykuly).*)/:slug",
     //   "destination": "/przepisy/:slug"
