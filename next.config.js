@@ -1,12 +1,5 @@
 const path = require('path')
 
-const withExportImages = require('next-export-optimize-images')
-
-
-module.exports = withExportImages({
-  output: 'export',
-})
-
 module.exports = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
@@ -119,12 +112,12 @@ module.exports = {
       },
       {
         source: '/((?!przepisy) || (?!artykuly).*)/:slug',
-        destination: '/przepisy/:slug*',
+        destination: '/przepisy/:slug',
         permanent: true,
       },
       {
         source: '/:slug*\.html\\',
-        destination: '/:slug*',
+        destination: '/:slug',
         permanent: true,
       },
     ];
