@@ -80,9 +80,9 @@
       "source": "/((?!przepisy) || (?!artykuly).*)/:slug",
       "destination": "/przepisy/:slug"
     },
-    {
-      "source": "/:slug*\\.html\\",
-      "destination": "/:slug"
-    }
+    // {
+    //   "source": "/:slug*\\.html\\",
+    //   "destination": "/:slug"
+    // }
   ]
 }
