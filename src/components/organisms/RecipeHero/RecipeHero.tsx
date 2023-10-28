@@ -65,7 +65,7 @@ export const RecipeHero = ({
         ) : (
           <>
             <h1>{title}</h1>
-            {ReactHtmlParser(`${excerpt}`)}
+            {excerpt && ReactHtmlParser(`${excerpt}`)}
           </>
         )}
         {servingsNumber && (

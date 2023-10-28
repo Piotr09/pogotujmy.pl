@@ -1,4 +1,4 @@
-import React, { ReactElement, useEffect, useState } from 'react'
+import React, { ReactElement } from 'react'
 import Head from 'next/head'
 import { GetStaticPathsResult, GetStaticPropsResult } from 'next'
 import {
@@ -10,9 +10,8 @@ import { ArticleProps } from '@/types/article'
 import { RecipeTemplate } from '@templates/RecipeTemplate/RecipeTemplate'
 import { mapRelatedCard } from '@helpers/mappers/relatedCard'
 import { mapRecipeHero } from '@helpers/mappers/recipeHero'
-import { mapSeoHead } from '@/helpers/mappers/seoHead'
 import Breadcrumbs from '@/components/atoms/Breadcrumbs'
-import SeoHead from '@/components/atoms/SeoHead'
+import ReactHtmlParser from 'react-html-parser'
 
 interface SingleRecipeProps {
   articleData: { entries: ArticleProps[] }
@@ -41,21 +40,23 @@ const singleRecipe = ({
     mapRelatedCard(item.node),
   )
 
+  const seoHead = ReactHtmlParser(`${articleData.seo.fullHead}`)
+
   return (
     <>
       <Head>
         <script type="application/ld+json">
           {JSON.stringify(articleStructuredData).replace(/\\'`/g, '')}
         </script>
+        {seoHead}
       </Head>
       <Breadcrumbs
         lastItemValue={articleHero.title}
         pages={[
           { label: 'strona główna', url: '/' },
-          { label: 'porady', url: '/porady' },
+          { label: 'artykuły', url: '/artykuly' },
         ]}
       />
-      {/* <SeoHead {...mapSeoHead(metaData)} /> */}
       <RecipeTemplate
         recipeHero={articleHero}
         recipeTags={articleData.tags.edges}
@@ -73,7 +74,7 @@ export async function getStaticPaths(): Promise<GetStaticPathsResult> {
   const paths = articles.map((article) => {
     return {
       params: {
-        slug: article.node.slug,
+        articleSlug: article.node.slug,
       },
     }
   })
@@ -81,15 +82,15 @@ export async function getStaticPaths(): Promise<GetStaticPathsResult> {
 }
 
 export async function getStaticProps(context: {
-  params: { slug: string }
+  params: { articleSlug: string }
 }): Promise<GetStaticPropsResult<SingleRecipeProps>> {
   if (!context) return { notFound: true }
   const {
-    params: { slug },
+    params: { articleSlug },
   } = context
-  if (!slug) return { notFound: true }
+  if (!articleSlug) return { notFound: true }
 
-  const articleData = await getSinglePost(`"${slug}"`)
+  const articleData = await getSinglePost(`"${articleSlug}"`)
   const newestArticles = await getWordpressPosts(4)
 
   return {

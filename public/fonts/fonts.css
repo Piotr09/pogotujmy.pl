@@ -1,22 +1,13 @@
 @font-face {
-  font-family: 'Sanchez Regular';
-  src: local('Sanchez Regular'), url("sanchez/SanchezRegular.woff2") format('woff2');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
   font-family: 'Figtree';
-  src: local('Figtree'), url("../fonts/figtree/FigtreeRegular.ttf") format('truetype');
+  src: local('Figtree'), url("./figtree/FigtreeRegular.ttf") format('truetype');
   font-weight: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Figtree';
-  src: local('Figtree'), url("../fonts/figtree/FigtreeBold.ttf") format('truetype');
+  src: local('Figtree'), url("./figtree/FigtreeBold.ttf") format('truetype');
   font-weight: bold;
   font-display: swap;
 }
-

@@ -32,7 +32,6 @@ const tagsListing = ({
     mapRelatedCard(item.node),
   )
 
-  console.log(tagName)
   return (
     <>
       <Breadcrumbs
