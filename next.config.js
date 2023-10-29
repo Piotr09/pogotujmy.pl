@@ -111,7 +111,7 @@ module.exports = {
         permanent: true,
       },
       {
-        source: '/((?!przepisy) || (?!artykuly).*)/:slug',
+        source: '/przepis/:slug',
         destination: '/przepisy/:slug',
         permanent: true,
       },
