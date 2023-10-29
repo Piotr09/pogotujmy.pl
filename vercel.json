@@ -1,13 +1,16 @@
 {
   "rewrites": [
     {
-      "source": "/((?!przepisy) || (?!artykuly).*)/:slug",
-      "destination": "/przepisy/:slug"
+      "source": "/bamix-wiecej-niz-zwykly-blender",
+      "destination": "/artykuly/bamix-wiecej-niz-zwykly-blender"
     },
     {
-      "source": "/:slug*\\.html\\",
-      "destination": "/:slug"
+      "source": "/2015/07/kurczak-po-meksykansku-z-pieczonymi-ziemniaczkami-recenzja-nozy-gerpol.html",
+      "destination": "/artykuly/kurczak-po-meksykansku-z-pieczonymi-ziemniaczkami-recenzja-nozy-gerpol"
+    },
+    {
+      "source": "/2015/08/zielony-makaron-z-brokulem-cukinia-i-fasolka-szparagowa-recenzja-nozy-gerpol.html",
+      "destination": "/artykuly/zielony-makaron-z-brokulem-cukinia-i-fasolka-szparagowa-recenzja-nozy-gerpol"
     }
   ]
 }
-
