@@ -1,12 +1,9 @@
 {
   "rewrites": [
     {
-      "source": "/((?!przepisy) || (?!artykuly).*)/:slug",
-      "destination": "/przepisy/:slug"
-    },
-    {
-      "source": "/:slug*\\.html\\",
-      "destination": "/:slug"
+      "source": "/najpyszniejsze-zagraniczne-slodycze-ktorych-musisz-sprobowac",
+      "destination": "/artykuly/najpyszniejsze-zagraniczne-slodycze-ktorych-musisz-sprobowac"
     }
   ]
 }
+
