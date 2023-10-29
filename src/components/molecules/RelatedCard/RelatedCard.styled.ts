@@ -144,14 +144,16 @@ export const StyledMoreInfoWrapper = styled.div`
   overflow: hidden;
   z-index: 0;
   width: 100%;
-  height: 100%;
+  max-height: 100%;
 
   picture {
     width: 100%;
-    height: 100%;
+    max-height: 100%;
+    aspect-ratio: 1 / 1;
     div {
       width: 100%;
-      height: 100%;
+      max-height: 100%;
+      aspect-ratio: 1 / 1;
     }
   }
 
