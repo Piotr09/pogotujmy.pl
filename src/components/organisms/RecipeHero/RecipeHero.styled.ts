@@ -133,6 +133,8 @@ export const DescriptionWrapper = styled.div<Partial<RecipeHeroProps>>`
   box-shadow: rgba(149,157,165,0.1) 0 8px 24px;
   margin-bottom: 2rem;
   line-height: 175%;
+  width: calc(100% - 2rem);
+  margin-top: -1rem;
   
   :hover {
     cursor: ${({ isHomepage }) => (isHomepage ? 'pointer' : 'unset')};
@@ -147,6 +149,7 @@ export const DescriptionWrapper = styled.div<Partial<RecipeHeroProps>>`
     right: 0;
     width: 50%;
     box-shadow: rgb(149 157 165 / 10%) 0 8px 24px;
+    margin-top: unset;
   }
 
   h1 {

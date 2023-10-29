@@ -7,10 +7,11 @@ export const StyledIngredientSectionWrapper = styled.div`
   flex-direction: column;
   height: auto;
   padding: 40px 30px;
+  margin-top: 2rem;
 
-  // @media ${({ theme }) => theme.media.desktop} {
-  //   padding: 40px 50px;
-  // }
+  @media ${({ theme }) => theme.media.desktop} {
+    margin-top: unset;
+  }
 
   li {
     padding: 10px 0;

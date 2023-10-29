@@ -23,11 +23,11 @@ export const Error = (): ReactElement => (
       </p>
     </TextWrapper>
     <ImageWrapper>
-      <Picture
-        path={
+      <img
+        src={
           'https://gc.pogotujmy.pl/cockpit/storage/uploads/2022/03/26/new_uid_623f1381336c9.png'
         }
-        altText="Nie znaleziono strony"
+        alt="Nie znaleziono strony"
       />
     </ImageWrapper>
   </ErrorWrapper>
