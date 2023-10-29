@@ -24,7 +24,7 @@ export const InlineImage = styled.img`
 export const ImageWrapper = styled.div`
   transform: translateX(55px);
 
-  picture {
+  img {
     max-width: 700px;
   }
 `

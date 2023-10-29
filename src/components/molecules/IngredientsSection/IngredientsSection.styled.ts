@@ -44,5 +44,11 @@ export const StyledRichText = styled.span`
 
 export const StyledUl = styled.ul`
   list-style: none;
+  li {
+    &::before {
+      content: '';
+      display: none;
+    }
+  }
 
 `

@@ -143,9 +143,16 @@ export const StyledMoreInfoWrapper = styled.div`
   position: relative;
   overflow: hidden;
   z-index: 0;
+  width: 100%;
+  height: 100%;
 
   picture {
-    min-height: 100%;
+    width: 100%;
+    height: 100%;
+    div {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   &:hover {
