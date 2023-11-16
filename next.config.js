@@ -311,6 +311,11 @@ module.exports = {
         permanent: true,
       },
       {
+        source: "/przepisy/jak-prawidlowo-czyscic-mlynki-do-soli-i-pieprzu",
+        destination: "/artykuly/jak-prawidlowo-czyscic-mlynki-do-soli-i-pieprzu",
+        permanent: true,
+      },
+      {
         source: "/2017/09/kurczak-sosie-pomidorowym-kaparami",
         destination: "/przepisy/kurczak-sosie-pomidorowym-kaparami",
         permanent: true,

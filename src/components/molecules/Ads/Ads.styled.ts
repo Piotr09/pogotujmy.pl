@@ -5,7 +5,7 @@ export const AdsWrapper = styled.div`
   height: 100%;
   max-height: 300px;
   aspect-ratio: 1/1;
-  background-image: url("https://www.pogotujmy.pl/wp-content/uploads/2023/06/2.png");
+  background-image: url("https://www.cms.pogotujmy.pl/wp-content/uploads/2023/06/2.png");
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
